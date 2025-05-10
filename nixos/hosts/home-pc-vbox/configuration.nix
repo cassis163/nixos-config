@@ -64,4 +64,18 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
+
+  boot.loader.grub = {
+    enable = true;
+    # This is the key line for VirtualBox BIOS boot:
+    devices = [ "/dev/sda" ];
+
+    # You likely do NOT need efiSupport = true; if using BIOS boot.
+    # If you enabled EFI in VM settings, then you would use:
+    # efiSupport = true;
+    # devices = [ "nodev" ];
+  };
+
+  # For BIOS boot, this is not strictly necessary but doesn't hurt
+  # boot.loader.efi.canTouchEfiVariables = false; # Explicitly false for BIOS
 }
