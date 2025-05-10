@@ -7,7 +7,7 @@
 }: let
   pkgs-unstable = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in {
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     package = pkgs-unstable.mesa;
 
