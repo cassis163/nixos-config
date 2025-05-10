@@ -40,7 +40,8 @@
     hypridle
     hyprlock
     hyprcursor
-    hyprsunset
+    # TODO: Add this back once it arrives in stable Nix channel
+    # hyprsunset
     hyprpolkitagent
     xdg-desktop-portal-hyprland
 
