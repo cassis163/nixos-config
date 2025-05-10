@@ -25,10 +25,10 @@
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       # FIXME replace with your hostname
-      caspera-host = nixpkgs.lib.nixosSystem {
+      home-pc-vbox = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+        modules = [./nixos/hosts/home-pc-vbox/configuration.nix];
       };
     };
 
@@ -36,12 +36,11 @@
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       # FIXME replace with your username@hostname
-      "caspera@caspera-host" = home-manager.lib.homeManagerConfiguration {
+      "caspera@home-pc-vbox" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         # > Our main home-manager configuration file <
         modules = [
-          ./nixos/configuration.nix
           ./home-manager/home.nix
         ];
       };

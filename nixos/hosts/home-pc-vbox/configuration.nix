@@ -17,7 +17,7 @@
     # ./users.nix
 
     # Load modules like hyprland.nix and users.nix
-    ./modules
+    ../../modules
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
