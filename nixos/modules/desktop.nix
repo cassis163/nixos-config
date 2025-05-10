@@ -48,7 +48,7 @@
     # Notification daemon
     mako
     # QtWayland support
-    bsForQt5.qt5.qtwayland
+    libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     # App launcher
     wofi
