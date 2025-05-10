@@ -29,9 +29,8 @@
     # See https://wiki.archlinux.org/title/Wayland
     xwayland.enable = true;
 
-    # TODO: Enable this once available in Nix stable channel
     # Universal Wayland Session Manager (see https://wiki.hyprland.org/Useful-Utilities/Systemd-start/)
-    # withUWSM = true;
+    withUWSM = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -40,8 +39,7 @@
     hypridle
     hyprlock
     hyprcursor
-    # TODO: Add this back once it arrives in stable Nix channel
-    # hyprsunset
+    hyprsunset
     hyprpolkitagent
     xdg-desktop-portal-hyprland
 
