@@ -62,7 +62,5 @@
     libsForQt5.dolphin
     # Webbrowser
     ungoogled-chromium
-    # Monitor layout GUI app
-    wdisplays
   ];
 }
