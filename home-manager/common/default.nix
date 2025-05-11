@@ -7,6 +7,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./modules
+  ];
+
   nixpkgs = {
     # You can add overlays here
     overlays = [

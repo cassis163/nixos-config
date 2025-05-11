@@ -15,7 +15,7 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
 
-    ../common.nix
+    ../common
   ];
 
   # TODO: Set your username
