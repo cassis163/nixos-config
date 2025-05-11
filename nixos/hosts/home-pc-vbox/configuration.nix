@@ -67,14 +67,14 @@
 
   boot.loader.grub = {
     enable = true;
-    # This is the key line for VirtualBox BIOS boot:
-    devices = [ "/dev/sda" ];
-
-    # You likely do NOT need efiSupport = true; if using BIOS boot.
-    # If you enabled EFI in VM settings, then you would use:
-    # efiSupport = true;
-    # devices = [ "nodev" ];
+    efiSupport = true;        # ENABLE UEFI support
+    devices = [ "nodev" ];    # For UEFI, GRUB is installed as an EFI application,
+                              # not to a specific device's boot sector.
+    # useOSProber = false;    # Optional, probably not needed in a single-OS VM
   };
+
+  # This tells NixOS it can manage UEFI boot variables
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # For BIOS boot, this is not strictly necessary but doesn't hurt
   # boot.loader.efi.canTouchEfiVariables = false; # Explicitly false for BIOS
