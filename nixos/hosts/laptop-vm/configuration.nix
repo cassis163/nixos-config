@@ -70,7 +70,7 @@
     grub.enable = false;
     efi = {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/EFI";
+      efiSysMountPoint = "/boot";
     };
   };
 }
