@@ -35,6 +35,9 @@
     withUWSM = true;
   };
 
+  # For Electron and Chromium based apps to use Wayland
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   environment.systemPackages = with pkgs; [
     # Hyprland packages
     hyprpaper
