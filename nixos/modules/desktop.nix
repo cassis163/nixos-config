@@ -31,27 +31,6 @@
 
     # Universal Wayland Session Manager (see https://wiki.hyprland.org/Useful-Utilities/Systemd-start/)
     withUWSM = true;
-
-    settings = {
-      # Define a variable for your terminal (optional, but good practice)
-      # Using optimization flags for Ghostty as recommended previously
-      "$terminal" = "ghostty --gtk-single-instance=true";
-
-      # ... other Hyprland settings ...
-      bind = [
-        "SUPER, RETURN, exec, $terminal"  # Launches Ghostty with Super + Enter
-        # Add other keybindings here
-      ];
-
-      # Optional: Optimize Ghostty startup by running a daemonized instance
-      exec-once = [
-        # ... other exec-once commands ...
-        "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
-      ];
-    };
-    # extraConfig = ''
-    #   # Any raw Hyprland config lines
-    # '';
   };
 
   environment.systemPackages = with pkgs; [
