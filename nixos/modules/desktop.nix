@@ -35,15 +35,6 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   environment.systemPackages = with pkgs; [
-    # Hyprland packages
-    # hyprpaper
-    # hypridle
-    # hyprlock
-    # hyprcursor
-    # hyprsunset
-    # hyprpolkitagent
-    # xdg-desktop-portal-hyprland
-
     # Multi-media
     pipewire
     # Notification daemon
