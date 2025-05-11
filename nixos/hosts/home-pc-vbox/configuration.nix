@@ -67,4 +67,5 @@
 
   # Boot loader
   boot.loader.grub.enable = true;
+  boot.loader.systemd-boot.enable = true;
 }
