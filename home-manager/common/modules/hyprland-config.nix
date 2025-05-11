@@ -28,13 +28,11 @@
             )
             9)
         );
-      ecosystem = {
-        no_update_news = true;
-        no_donation_nag = true;
-      }
     };
     # Raw hyprland.conf content
     extraConfig = ''
+      ecosystem:no_update_news = true
+      ecosystem:no_donation_nag = true
     '';
   };
 }
