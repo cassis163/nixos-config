@@ -9,7 +9,10 @@
   # Set up SDDM
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true;
+    wayland = {
+      enable = true;
+      compositor = "hyprland";
+    };
   };
 
   # Enable Hyprland Cachix (see https://wiki.hyprland.org/Nix/Cachix/)
