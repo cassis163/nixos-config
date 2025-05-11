@@ -65,17 +65,6 @@
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
 
-  boot.loader.grub = {
-    enable = true;
-    efiSupport = true;        # ENABLE UEFI support
-    devices = [ "nodev" ];    # For UEFI, GRUB is installed as an EFI application,
-                              # not to a specific device's boot sector.
-    # useOSProber = false;    # Optional, probably not needed in a single-OS VM
-  };
-
-  # This tells NixOS it can manage UEFI boot variables
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # For BIOS boot, this is not strictly necessary but doesn't hurt
-  # boot.loader.efi.canTouchEfiVariables = false; # Explicitly false for BIOS
+  # Boot loader
+  boot.loader.grub.enable = true;
 }
