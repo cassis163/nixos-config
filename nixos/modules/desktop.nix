@@ -27,8 +27,10 @@
     # See https://wiki.archlinux.org/title/Wayland
     xwayland.enable = true;
 
+    # TODO: Turn this on at some point. This does not work with ly for some reason.
+    # .. it keeps botting compositor process twice and then crashes...
     # Universal Wayland Session Manager (see https://wiki.hyprland.org/Useful-Utilities/Systemd-start/)
-    withUWSM = true;
+    # withUWSM = true;
   };
 
   # For Electron and Chromium based apps to use Wayland
