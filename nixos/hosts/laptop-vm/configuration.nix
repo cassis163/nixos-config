@@ -75,5 +75,5 @@
   };
 
   services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = mkSure true;
+  services.spice-vdagentd.enable = true;
 }
