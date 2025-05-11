@@ -25,10 +25,10 @@
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       # FIXME replace with your hostname
-      home-pc-vbox = nixpkgs.lib.nixosSystem {
+      laptop-vm = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./nixos/hosts/home-pc-vbox/configuration.nix];
+        modules = [./nixos/hosts/laptop-vm/configuration.nix];
       };
     };
 
@@ -36,7 +36,7 @@
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       # FIXME replace with your username@hostname
-      "caspera@home-pc-vbox" = home-manager.lib.homeManagerConfiguration {
+      "caspera@laptop-vm" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         # > Our main home-manager configuration file <

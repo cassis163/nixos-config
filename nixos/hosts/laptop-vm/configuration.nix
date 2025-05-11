@@ -65,12 +65,12 @@
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
 
-  boot.loader.grub.enable = true;
+  boot.loader.grub.enable = false;
   boot.loader.grub.device = "/dev/vda";
   # For BIOS systems, efiSupport should be false (which is the default).
   # You can explicitly set it if you prefer:
   # boot.loader.grub.efiSupport = false;
 
   # Ensure systemd-boot is disabled:
-  boot.loader.systemd-boot.enable = false;
+  boot.loader.systemd-boot.enable = true;
 }

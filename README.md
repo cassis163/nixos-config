@@ -1,3 +1,6 @@
+### Prerequisites
+* A devices that runs on UEFI (in order to support systemd)
+
 ### Setup
 1. Clone this repo and put it in `/mnt/etc/nixos/nixos-config`
 2. Generate a `hardware-configuration.nix` file
