@@ -4,7 +4,6 @@
   inputs,
   ...
 }: {
-  services.displayManager.defaultSession = "hyprland-uwsm";
   services.displayManager.ly = {
     enable = true;
   };
@@ -37,13 +36,13 @@
 
   environment.systemPackages = with pkgs; [
     # Hyprland packages
-    hyprpaper
-    hypridle
-    hyprlock
-    hyprcursor
-    hyprsunset
-    hyprpolkitagent
-    xdg-desktop-portal-hyprland
+    # hyprpaper
+    # hypridle
+    # hyprlock
+    # hyprcursor
+    # hyprsunset
+    # hyprpolkitagent
+    # xdg-desktop-portal-hyprland
 
     # Multi-media
     pipewire
