@@ -6,13 +6,10 @@
 }: {
   services.displayManager.defaultSession = "hyprland-uwsm";
 
-  # Set up SDDM
-  services.displayManager.sddm = {
+  # Set up GDM
+  services.displayManager.gdm = {
     enable = true;
-    wayland = {
-      enable = true;
-      compositor = "hyprland";
-    };
+    wayland = true;
   };
 
   # Enable Hyprland Cachix (see https://wiki.hyprland.org/Nix/Cachix/)
