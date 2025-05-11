@@ -28,7 +28,7 @@
     xwayland.enable = true;
 
     # Universal Wayland Session Manager (see https://wiki.hyprland.org/Useful-Utilities/Systemd-start/)
-    withUWSM = true;
+    # withUWSM = true;
   };
 
   # For Electron and Chromium based apps to use Wayland
