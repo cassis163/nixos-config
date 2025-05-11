@@ -4,7 +4,7 @@
   inputs,
   ...
 }: {
-  services.displayManager.defaultSession = "hyprland";
+  services.displayManager.defaultSession = "hyprland-uwsm";
 
   # Set up SDDM
   services.displayManager.sddm = {
