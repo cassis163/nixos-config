@@ -76,4 +76,10 @@
 
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
+
+  virtualisation.qemu.options = [
+    "-vga none"
+    "-device virtio-gpu-gl-pci"
+    "-display default,gl=on"
+  ];
 }
