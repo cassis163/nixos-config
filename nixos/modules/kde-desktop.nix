@@ -17,4 +17,7 @@
   environment.systemPackages = with pkgs; [
     kdePackages.krohnkite
   ];
+
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
 }

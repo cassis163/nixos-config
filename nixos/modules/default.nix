@@ -1,7 +1,7 @@
 {
   imports = [
-    ./greeter.nix
-    ./hyprland-desktop.nix
+    # ./greeter.nix
+    # ./hyprland-desktop.nix
     ./kde-desktop.nix
     ./networking.nix
     ./users.nix
