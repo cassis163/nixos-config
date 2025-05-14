@@ -5,7 +5,7 @@
     ./kde-desktop.nix
     ./networking.nix
     ./users.nix
-    ./graphics.nix
+    # ./graphics.nix
     ./bluetooth.nix
   ];
 }
