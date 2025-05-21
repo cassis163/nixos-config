@@ -43,7 +43,6 @@
     # Notification daemon
     mako
     # QtWayland support
-    libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     # App launcher
     wofi
@@ -54,7 +53,7 @@
     # Terminal
     ghostty
     # File manager
-    libsForQt5.dolphin
+    kdePackages.dolphin
     # Webbrowser
     ungoogled-chromium
   ];
