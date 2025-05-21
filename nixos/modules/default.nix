@@ -1,11 +1,11 @@
 {
   imports = [
-    # ./greeter.nix
-    # ./hyprland-desktop.nix
-    ./kde-desktop.nix
+    ./greeter.nix
+    ./hyprland-desktop.nix
+    # ./kde-desktop.nix
     ./networking.nix
     ./users.nix
-    # ./graphics.nix
+    ./graphics.nix
     ./bluetooth.nix
   ];
 }
