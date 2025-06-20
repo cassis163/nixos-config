@@ -12,5 +12,6 @@
     ./backlight.nix
     ./fonts.nix
     ./direnv.nix
+    ./displaylink.nix
   ];
 }
