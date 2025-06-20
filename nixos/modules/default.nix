@@ -13,5 +13,6 @@
     ./fonts.nix
     ./direnv.nix
     ./displaylink.nix
+    ./locale.nix
   ];
 }
