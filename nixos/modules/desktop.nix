@@ -20,7 +20,9 @@
 
   ### Niri WM
 
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     # Essential components
@@ -33,6 +35,8 @@
     xwayland-satellite
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
+
+    wdisplays
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
