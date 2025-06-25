@@ -75,4 +75,15 @@
       efiSysMountPoint = "/boot";
     };
   };
+
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
+  # AMDVLK
+  hardware.graphics.extraPackages = with pkgs; [
+    amdvlk
+  ];
+  # For 32 bit applications
+  hardware.graphics.extraPackages32 = with pkgs; [
+    driversi686Linux.amdvlk
+  ];
 }
