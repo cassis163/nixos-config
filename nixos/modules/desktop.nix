@@ -24,6 +24,11 @@
     enable = true;
   };
 
+  # Fix bug where suspend does not work
+  systemd.sleep.extraConfig = ''
+    SuspendState=freeze
+  '';
+
   environment.systemPackages = with pkgs; [
     # Essential components
     alacritty    # Terminal
