@@ -15,5 +15,6 @@
     ./displaylink.nix
     ./locale.nix
     ./chat.nix
+    ./stylix.nix
   ];
 }

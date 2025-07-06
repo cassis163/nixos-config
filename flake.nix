@@ -53,6 +53,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.caspera = import ./home-manager/personal/home.nix;
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };
