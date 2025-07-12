@@ -6,6 +6,9 @@
 }:
 {
   environment.systemPackages = with pkgs; [
+    zellij
+    btop
+    fastfetch
     nixfmt-rfc-style
     (vscode-with-extensions.override {
       vscodeExtensions =

@@ -23,4 +23,4 @@ style = "Regular"
 decorations = "None"
 
 [terminal]
-shell = { program = "nu", args = [""] }
+shell = { program = "zellij", args = ["options", "--default-shell", "nu"] }

@@ -13,6 +13,7 @@
     ./fuzzel
     ./alacritty
     ./nushell
+    ./zellij
   ];
 
   # Enable home-manager and git
