@@ -8,10 +8,11 @@
   ...
 }: {
   imports = [
-    # ./modules
     ./waybar
     ./niri
     ./fuzzel
+    ./alacritty
+    ./nushell
   ];
 
   # Enable home-manager and git

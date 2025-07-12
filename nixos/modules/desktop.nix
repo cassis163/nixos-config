@@ -41,6 +41,7 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
     wdisplays
+    wl-clipboard
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
