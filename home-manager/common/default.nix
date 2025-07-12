@@ -11,6 +11,7 @@
     # ./modules
     ./waybar
     ./niri
+    ./fuzzel
   ];
 
   # Enable home-manager and git
