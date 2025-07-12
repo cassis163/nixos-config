@@ -2,75 +2,89 @@
   font-family: 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', 'Droid Sans Mono Nerd Font', 'Roboto Mono', monospace;
   font-size: 12px;
   min-height: 0;
-  color: #eaeaea;
+  color: #f8f8f2;
   background: none;
   border: none;
 }
 
 window#waybar {
-  background: #101014;
-  color: #eaeaea;
+  background: #282a36;
+  color: #f8f8f2;
   transition: background-color 0.4s;
   padding: 0;
   min-height: 0;
-  /* Optional: reduce bar height further */
-  /* border-top: 1px solid #23232c; */
+  box-shadow: 0 2px 12px 0 rgba(40, 42, 54, 0.25);
 }
 
 window#waybar.hidden {
   opacity: 0.07;
 }
 
+/* Workspaces: Small Ghostly Pills with Vertical Spacing */
 #workspaces {
   background: none;
-  padding: 0 8px;
-  margin-right: 2px;
+  padding: 0 12px;
+  margin-right: 4px;
 }
 
 #workspaces button {
-  margin: 0 1px;                      /* More horizontal space between buttons */
-  border-radius: 4px;                  /* Slightly rounded corners */
+  margin: 4px 2px;
+  /* Adds vertical (top & bottom) and horizontal spacing */
+  border-radius: 999px;
   font-weight: 500;
   color: #b0b0b0;
-  background: none;
+  /* Ghostly text */
+  background: rgba(255, 255, 255, 0.11);
+  /* Ghostly pill */
   letter-spacing: 0.1px;
-  padding: 3px 12px;                   /* Wider horizontal padding for rectangular shape */
-  font-size: 12px;
-  min-width: 12px;                     /* Ensures a minimum width for rectangle look */
-  min-height: 12px;                    /* Ensures vertical alignment and click area */
-  /* box-sizing: border-box; */
-  border: 1.5px solid transparent;     /* For smooth transitions and active/hover effect */
-  transition: background 0.10s, color 0.10s, border-color 0.10s;
+  padding: 2px 12px;
+  font-size: 11px;
+  min-width: 18px;
+  min-height: 18px;
+  border: 1.5px solid rgba(255, 255, 255, 0.17);
+  /* Subtle ghostly border */
+  transition: background 0.13s, color 0.13s, border-color 0.13s, box-shadow 0.15s;
+  box-shadow: 0 1px 4px 0 rgba(68, 71, 90, 0.10);
 }
 
 #workspaces button:hover {
-  background: #23232c;
-  color: #fff;
-  border-color: #44445a;
-}
-
-#workspaces button.active {
-  background: #eaeaea;
-  color: #101014;
+  background: rgba(255, 255, 255, 0.18);
+  color: #cba6f7;
   border-color: #cba6f7;
 }
 
-#workspaces button.urgent {
-  background: #eb4d4b;
-  color: #fff;
-  border-color: #eb4d4b;
+#workspaces button.active {
+  background: rgba(255, 255, 255, 0.515);
+  color: #282a36;
+  border-color: #cba6f7;
+  font-weight: 700;
+  box-shadow: 0 2px 8px 0 rgba(189, 147, 249, 0.13);
 }
 
+#workspaces button.urgent {
+  background: #ff5555;
+  color: #f8f8f2;
+  border-color: #ffb86c;
+  font-weight: 700;
+  box-shadow: 0 2px 8px 0 rgba(255, 85, 85, 0.15);
+}
+
+#workspaces button:not(.active):not(.urgent) {
+  opacity: 0.90;
+}
+
+/* Window Title */
 #window {
-  font-size: 12px;
-  color: #eaeaea;
+  font-size: 13px;
+  color: #f8f8f2;
   background: none;
-  padding: 0 8px;
+  padding: 0 14px;
   font-weight: 400;
   min-width: 0;
   min-height: 0;
 }
 
+/* Status Widgets */
 #clock,
 #battery,
 #cpu,
@@ -84,40 +98,87 @@ window#waybar.hidden {
 #mode,
 #custom-swaylock,
 #idle_inhibitor {
-  border-left: 1px solid #23232c;
+  border-left: 1px solid #44475a;
   margin: 0;
-  padding: 0 7px;
+  padding: 0 12px;
   font-size: 13px;
   background: none;
   min-height: 0;
 }
 
-#wireplumber { color: #7adfff; }
-#cpu         { color: #f3e979; }
-#memory      { color: #b4befe; }
-#temperature { color: #f38ba8; border-left: none; margin-left: -5px; }
-#backlight   { color: #fab387; }
-#battery     { color: #a6e3a1; }
-#battery.charging { color: #8ec07c; }
+/* Dracula Widget Colors */
+#wireplumber {
+  color: #8be9fd;
+}
+
+#cpu {
+  color: #f1fa8c;
+}
+
+#memory {
+  color: #bd93f9;
+}
+
+#temperature {
+  color: #ff79c6;
+  margin-left: 0;
+}
+
+#backlight {
+  color: #ffb86c;
+}
+
+#battery {
+  color: #50fa7b;
+}
+
+#battery.charging {
+  color: #69ff94;
+}
+
 #battery.critical:not(.charging) {
   color: #ffffff;
-  animation: blink 0.5s linear infinite alternate;
+  animation: blink 0.6s linear infinite alternate;
 }
-@keyframes blink { to { color: #000000; } }
-#network     { color: #94e2d5; }
-#clock       { color: #cba6f7; }
-#custom-swaylock { color: #f5c2e7; }
 
-#tray>.passive { -gtk-icon-effect: dim; }
-#tray>.needs-attention { -gtk-icon-effect: highlight; }
+@keyframes blink {
+  to {
+    color: #282a36;
+  }
+}
 
+#network {
+  color: #8be9fd;
+}
+
+#clock {
+  color: #bd93f9;
+}
+
+#custom-swaylock {
+  color: #ff92df;
+}
+
+/* Tray */
+#tray>.passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+/* Tooltip */
 tooltip {
-  background: #181820;
-  color: #eaeaea;
+  background: #44475a;
+  color: #f8f8f2;
   font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #bd93f9;
+  box-shadow: 0 2px 8px 0 rgba(40, 42, 54, 0.18);
 }
+
 tooltip label {
   padding: 1px 0;
   background: none;
