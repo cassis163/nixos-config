@@ -1,0 +1,120 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "width": "auto",
+  "spacing": 4,
+  "modules-left": [
+    "niri/workspaces"
+  ],
+  // "modules-center": [
+  //   "niri/window"
+  // ],
+  "modules-right": [
+    "tray",
+    "wireplumber",
+    "network",
+    "cpu",
+    "memory",
+    "disk",
+    // "backlight",
+    "temperature",
+    "battery",
+    "clock",
+    "custom/swaylock"
+  ],
+  "niri/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": []
+    }
+  },
+  "disk": {
+    "interval": 30,
+    "format": " {specific_free:0.2f} / {specific_total:0.2f} GB",
+    "unit": "GB",
+    "path": "/"
+  },
+  "window": {
+    "format": "{}",
+    "max-length": 60,
+    "tooltip": false
+  },
+  "custom/swaylock": {
+    "format": "",
+    "on-click": "swaylock -f",
+    "tooltip": false
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "format": " {:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {}%"
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format-critical": " {temperatureC}°C",
+    "format": " {temperatureC}°C",
+    "tooltip": false
+  },
+  "backlight": {
+    "format": " {percent}%"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time}"
+  },
+  "network": {
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": " {ipaddr}/{cidr}",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": " Disconnected",
+    "format-alt": " {ifname}: {ipaddr}/{cidr}"
+  },
+  "wireplumber": {
+    "format": " {volume}%",
+    "format-muted": "",
+    "format-bluetooth": " {volume}%",
+    "format-bluetooth-muted": "",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "on-click": "pavucontrol"
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜"
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+  }
+}

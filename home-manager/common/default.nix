@@ -9,6 +9,7 @@
 }: {
   imports = [
     # ./modules
+    ./waybar
   ];
 
   # Enable home-manager and git

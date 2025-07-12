@@ -12,7 +12,8 @@
     ./backlight.nix
     ./fonts.nix
     ./direnv.nix
-    ./displaylink.nix
+    # DisplayLink is currently unsupported
+    # ./displaylink.nix
     ./locale.nix
     ./chat.nix
     ./stylix.nix

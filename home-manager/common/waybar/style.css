@@ -1,0 +1,124 @@
+* {
+  font-family: 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', 'Droid Sans Mono Nerd Font', 'Roboto Mono', monospace;
+  font-size: 12px;
+  min-height: 0;
+  color: #eaeaea;
+  background: none;
+  border: none;
+}
+
+window#waybar {
+  background: #101014;
+  color: #eaeaea;
+  transition: background-color 0.4s;
+  padding: 0;
+  min-height: 0;
+  /* Optional: reduce bar height further */
+  /* border-top: 1px solid #23232c; */
+}
+
+window#waybar.hidden {
+  opacity: 0.07;
+}
+
+#workspaces {
+  background: none;
+  padding: 0 8px;
+  margin-right: 2px;
+}
+
+#workspaces button {
+  margin: 0 1px;                      /* More horizontal space between buttons */
+  border-radius: 4px;                  /* Slightly rounded corners */
+  font-weight: 500;
+  color: #b0b0b0;
+  background: none;
+  letter-spacing: 0.1px;
+  padding: 3px 12px;                   /* Wider horizontal padding for rectangular shape */
+  font-size: 12px;
+  min-width: 12px;                     /* Ensures a minimum width for rectangle look */
+  min-height: 12px;                    /* Ensures vertical alignment and click area */
+  /* box-sizing: border-box; */
+  border: 1.5px solid transparent;     /* For smooth transitions and active/hover effect */
+  transition: background 0.10s, color 0.10s, border-color 0.10s;
+}
+
+#workspaces button:hover {
+  background: #23232c;
+  color: #fff;
+  border-color: #44445a;
+}
+
+#workspaces button.active {
+  background: #eaeaea;
+  color: #101014;
+  border-color: #cba6f7;
+}
+
+#workspaces button.urgent {
+  background: #eb4d4b;
+  color: #fff;
+  border-color: #eb4d4b;
+}
+
+#window {
+  font-size: 12px;
+  color: #eaeaea;
+  background: none;
+  padding: 0 8px;
+  font-weight: 400;
+  min-width: 0;
+  min-height: 0;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#wireplumber,
+#tray,
+#mode,
+#custom-swaylock,
+#idle_inhibitor {
+  border-left: 1px solid #23232c;
+  margin: 0;
+  padding: 0 7px;
+  font-size: 13px;
+  background: none;
+  min-height: 0;
+}
+
+#wireplumber { color: #7adfff; }
+#cpu         { color: #f3e979; }
+#memory      { color: #b4befe; }
+#temperature { color: #f38ba8; border-left: none; margin-left: -5px; }
+#backlight   { color: #fab387; }
+#battery     { color: #a6e3a1; }
+#battery.charging { color: #8ec07c; }
+#battery.critical:not(.charging) {
+  color: #ffffff;
+  animation: blink 0.5s linear infinite alternate;
+}
+@keyframes blink { to { color: #000000; } }
+#network     { color: #94e2d5; }
+#clock       { color: #cba6f7; }
+#custom-swaylock { color: #f5c2e7; }
+
+#tray>.passive { -gtk-icon-effect: dim; }
+#tray>.needs-attention { -gtk-icon-effect: highlight; }
+
+tooltip {
+  background: #181820;
+  color: #eaeaea;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+tooltip label {
+  padding: 1px 0;
+  background: none;
+}
