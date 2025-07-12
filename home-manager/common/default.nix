@@ -10,6 +10,7 @@
   imports = [
     # ./modules
     ./waybar
+    ./niri
   ];
 
   # Enable home-manager and git

@@ -6,7 +6,7 @@
     ./bluetooth.nix
     ./desktop.nix
     ./audio.nix
-    ./vscode.nix
+    ./dev.nix
     ./nvim.nix
     ./browser.nix
     ./backlight.nix
