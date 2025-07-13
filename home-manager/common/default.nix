@@ -16,6 +16,7 @@
     ./zellij
     ./swaybg
     ./mako
+    ./just
   ];
 
   # Enable home-manager and git

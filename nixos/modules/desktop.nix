@@ -31,6 +31,7 @@
 
   environment.systemPackages = with pkgs; [
     # Essential components
+    just         # Make NixOS commands less cumbersome
     alacritty    # Terminal
     fuzzel       # App launcher
     waybar       # Status bar

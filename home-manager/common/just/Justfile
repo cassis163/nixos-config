@@ -1,0 +1,27 @@
+# Rebuild and switch to the new configuration for a specific machine
+switch machine:
+    sudo nixos-rebuild switch --flake /etc/nixos/nixos-config#{{machine}}
+
+# Build the configuration for a specific machine (does not switch)
+build machine:
+    sudo nixos-rebuild build --flake /etc/nixos/nixos-config#{{machine}}
+
+# Test the configuration for a specific machine (does not switch)
+test machine:
+    sudo nixos-rebuild test --flake /etc/nixos/nixos-config#{{machine}}
+
+# Rollback the configuration for a specific machine
+rollback machine:
+    sudo nixos-rebuild switch --rollback --flake /etc/nixos/nixos-config#{{machine}}
+
+# Update flake inputs (fetch latest versions of dependencies)
+update:
+    nix flake update
+
+# Clean up old generations and garbage collect
+clean:
+    sudo nix-collect-garbage -d
+
+# Show the current system generation for a specific machine
+list-generations machine:
+    sudo nix-env --list-generations --profile /nix/var/nix/profiles/system --flake /etc/nixos/nixos-config#{{machine}}
