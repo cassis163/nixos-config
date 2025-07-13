@@ -3,7 +3,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   ### Plasma DE
 
   services = {
@@ -16,7 +17,6 @@
 
   # Fix invisible cursor and theming
   programs.dconf.enable = true;
-
 
   ### Niri WM
 
@@ -31,14 +31,14 @@
 
   environment.systemPackages = with pkgs; [
     # Essential components
-    just         # Make NixOS commands less cumbersome
-    alacritty    # Terminal
-    fuzzel       # App launcher
-    waybar       # Status bar
-    swaylock     # Lockscreen
-    mako         # Notifications
-    libnotify    # Notifications debugging
-    swaybg       # Wallpaper utility
+    just # Make NixOS commands less cumbersome
+    alacritty # Terminal
+    fuzzel # App launcher
+    waybar # Status bar
+    swaylock # Lockscreen
+    mako # Notifications
+    libnotify # Notifications debugging
+    swaybg # Wallpaper utility
     xwayland-satellite
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk

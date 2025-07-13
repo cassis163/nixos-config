@@ -3,6 +3,7 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   programs.light.enable = true;
 }
