@@ -48,5 +48,5 @@
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.DISPLAY = ":0";
+  environment.sessionVariables.DISPLAY = ":12";
 }
