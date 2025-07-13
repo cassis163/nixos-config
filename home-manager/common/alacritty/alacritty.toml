@@ -1,4 +1,4 @@
-general.import = ["./dracula.toml"]
+general.import = ["./theme.toml"]
 
 [font]
 size = 12.0
