@@ -27,3 +27,4 @@
 * Maybe get into disko to declaratively set up file system
 * Change color theme to something modern and slick (kinda Vercel-like)
 * Remove Plasma, keeps some apps and change greeter app from SDDM to something lighter
+* Change background into something that is not interrupting focus
