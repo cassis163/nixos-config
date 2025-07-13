@@ -1,90 +1,90 @@
+/* Root: Geist Mono and minimal base */
 * {
-  font-family: 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', 'Droid Sans Mono Nerd Font', 'Roboto Mono', monospace;
-  font-size: 12px;
-  min-height: 0;
-  color: #f8f8f2;
+  font-family: 'Geist Mono', 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', 'Roboto Mono', monospace;
+  font-size: 13px;
+  color: #fff;
   background: none;
   border: none;
+  min-height: 0;
+  letter-spacing: 0.02em;
 }
 
+/* Main Bar: Deep black, subtle shadow, no border */
 window#waybar {
-  background: #282a36;
-  color: #f8f8f2;
+  background: #111112;
+  color: #fff;
   transition: background-color 0.4s;
   padding: 0;
   min-height: 0;
-  box-shadow: 0 2px 12px 0 rgba(40, 42, 54, 0.25);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+  border: none;
 }
 
+/* Hidden State */
 window#waybar.hidden {
-  opacity: 0.07;
+  opacity: 0.05;
 }
 
-/* Workspaces: Small Ghostly Pills with Vertical Spacing */
+/* Workspaces: Flat, pill-shaped, monochrome, bold active */
 #workspaces {
   background: none;
-  padding: 0 12px;
-  margin-right: 4px;
+  padding: 0 10px;
+  margin-right: 8px;
 }
 
 #workspaces button {
-  margin: 4px 2px;
-  /* Adds vertical (top & bottom) and horizontal spacing */
+  margin: 0 4px;
   border-radius: 999px;
-  font-weight: 500;
-  color: #b0b0b0;
-  /* Ghostly text */
-  background: rgba(255, 255, 255, 0.11);
-  /* Ghostly pill */
-  letter-spacing: 0.1px;
-  padding: 2px 12px;
-  font-size: 11px;
-  min-width: 18px;
-  min-height: 18px;
-  border: 1.5px solid rgba(255, 255, 255, 0.17);
-  /* Subtle ghostly border */
-  transition: background 0.13s, color 0.13s, border-color 0.13s, box-shadow 0.15s;
-  box-shadow: 0 1px 4px 0 rgba(68, 71, 90, 0.10);
+  font-weight: 400;
+  color: #b3b3b3;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 14px;
+  font-size: 12px;
+  min-width: 22px;
+  min-height: 22px;
+  border: 1.5px solid transparent;
+  transition: background 0.12s, color 0.12s, border-color 0.12s, box-shadow 0.14s;
+  box-shadow: none;
 }
 
 #workspaces button:hover {
-  background: rgba(255, 255, 255, 0.18);
-  color: #cba6f7;
-  border-color: #cba6f7;
+  background: rgba(255, 255, 255, 0.11);
+  color: #fff;
+  border-color: #fff;
 }
 
 #workspaces button.active {
-  background: rgba(255, 255, 255, 0.515);
-  color: #282a36;
-  border-color: #cba6f7;
-  font-weight: 700;
-  box-shadow: 0 2px 8px 0 rgba(189, 147, 249, 0.13);
+  background: #fff;
+  color: #111112;
+  border-color: #111112;
+  font-weight: 600;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.07);
 }
 
 #workspaces button.urgent {
   background: #ff5555;
-  color: #f8f8f2;
-  border-color: #ffb86c;
-  font-weight: 700;
-  box-shadow: 0 2px 8px 0 rgba(255, 85, 85, 0.15);
+  color: #fff;
+  border-color: #ff5555;
+  font-weight: 600;
 }
 
 #workspaces button:not(.active):not(.urgent) {
-  opacity: 0.90;
+  opacity: 0.92;
 }
 
-/* Window Title */
+/* Window Title: Subtle, centered, no background */
 #window {
   font-size: 13px;
-  color: #f8f8f2;
+  color: #fff;
   background: none;
-  padding: 0 14px;
+  padding: 0 18px;
   font-weight: 400;
   min-width: 0;
   min-height: 0;
+  letter-spacing: 0.01em;
 }
 
-/* Status Widgets */
+/* Status Widgets: Monochrome, left border, subtle padding */
 #clock,
 #battery,
 #cpu,
@@ -98,68 +98,37 @@ window#waybar.hidden {
 #mode,
 #custom-swaylock,
 #idle_inhibitor {
-  border-left: 1px solid #44475a;
+  border-left: 1px solid #232324;
   margin: 0;
-  padding: 0 12px;
+  padding: 0 16px;
   font-size: 13px;
   background: none;
   min-height: 0;
+  color: #fff;
 }
 
-/* Dracula Widget Colors */
-#wireplumber {
-  color: #8be9fd;
-}
-
-#cpu {
-  color: #f1fa8c;
-}
-
-#memory {
-  color: #bd93f9;
-}
-
-#temperature {
-  color: #ff79c6;
-  margin-left: 0;
-}
-
-#backlight {
-  color: #ffb86c;
-}
-
-#battery {
-  color: #50fa7b;
-}
-
+/* Accent Colors: Use only for state (charging, critical, urgent) */
 #battery.charging {
-  color: #69ff94;
+  color: #00e887;
 }
 
 #battery.critical:not(.charging) {
-  color: #ffffff;
+  color: #ff5555;
   animation: blink 0.6s linear infinite alternate;
 }
 
 @keyframes blink {
   to {
-    color: #282a36;
+    color: #111112;
   }
 }
 
-#network {
-  color: #8be9fd;
+#workspaces button.urgent,
+#battery.critical:not(.charging) {
+  font-weight: 700;
 }
 
-#clock {
-  color: #bd93f9;
-}
-
-#custom-swaylock {
-  color: #ff92df;
-}
-
-/* Tray */
+/* Tray: Minimal icon effects */
 #tray>.passive {
   -gtk-icon-effect: dim;
 }
@@ -168,15 +137,15 @@ window#waybar.hidden {
   -gtk-icon-effect: highlight;
 }
 
-/* Tooltip */
+/* Tooltip: Flat, sharp, high-contrast */
 tooltip {
-  background: #44475a;
-  color: #f8f8f2;
+  background: #232324;
+  color: #fff;
   font-size: 11px;
-  padding: 5px 10px;
+  padding: 6px 14px;
   border-radius: 6px;
-  border: 1px solid #bd93f9;
-  box-shadow: 0 2px 8px 0 rgba(40, 42, 54, 0.18);
+  border: 1px solid #444;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.13);
 }
 
 tooltip label {
