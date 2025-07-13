@@ -25,5 +25,4 @@
 ## TODO
 * Start maintaining `librepods` for NixOS to unlock the full power of AirPods
 * Maybe get into disko to declaratively set up file system
-* Find replacement for `flameshot` screenshot app
 * Change color theme to something modern and slick (kinda Vercel-like)
