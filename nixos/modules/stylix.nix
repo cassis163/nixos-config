@@ -8,7 +8,7 @@
   stylix = {
     enable = true;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/material-darker.yaml";
     image = ../../wallpapers/wallpaper.png;
     cursor = {
       package = pkgs.bibata-cursors;
