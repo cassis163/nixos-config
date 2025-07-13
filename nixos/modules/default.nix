@@ -15,7 +15,6 @@
     # DisplayLink is currently unsupported
     # ./displaylink.nix
     ./locale.nix
-    ./chat.nix
     ./stylix.nix
     ./ssh.nix
     ./podman.nix
