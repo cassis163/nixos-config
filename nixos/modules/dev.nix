@@ -16,8 +16,15 @@
         [
           editorconfig.editorconfig
           jnoortheen.nix-ide
+          vscodevim.vim
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "github-vscode-theme";
+            publisher = "GitHub";
+            version = "6.3.5";
+            sha256 = "sha256-dOadoYBPcYrpzmqOpJwG+/nPwTfJtlsOFDU3FctdR0o=";
+          }
           {
             name = "kdl";
             publisher = "kdl-org";
