@@ -10,6 +10,7 @@
     btop
     fastfetch
     nixfmt-rfc-style
+    jetbrains.idea-community-bin
     (vscode-with-extensions.override {
       vscodeExtensions =
         with vscode-extensions;
