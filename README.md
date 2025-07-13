@@ -20,10 +20,11 @@
 3. Remove default generated `configuration.nix` file
 4. Move the generated `hardware-configuration.nix` file to `nixos-config/nixos`
 5. Rebuild with `sudo nixos-rebuild switch --flake /etc/nixos/nixos-config#<HOSTNAME>`
-6. From then on, you can use `just switch <HOSTNAME>` and other commands
+6. From then on, you can use `just switch <HOSTNAME>` and other commands inside `$HOME`
 
 ## TODO
 * Start maintaining `librepods` for NixOS to unlock the full power of AirPods
 * Maybe get into disko to declaratively set up file system
-* Find replacement for `flameshot` screenshot app
 * Change color theme to something modern and slick (kinda Vercel-like)
+* Remove Plasma, keeps some apps and change greeter app from SDDM to something lighter
+* Change background into something that is not interrupting focus
