@@ -28,8 +28,5 @@
     enable = true;
     userName = "cassis163";
     userEmail = "cas.aangeenbrug@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
   };
 }

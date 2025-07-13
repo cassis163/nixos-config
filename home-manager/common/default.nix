@@ -17,6 +17,7 @@
     ./swaybg
     ./mako
     ./just
+    ./git
   ];
 
   # Enable home-manager and git
