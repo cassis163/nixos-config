@@ -17,5 +17,6 @@
     ./locale.nix
     ./chat.nix
     ./stylix.nix
+    ./ssh.nix
   ];
 }
