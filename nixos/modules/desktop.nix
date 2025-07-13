@@ -45,7 +45,6 @@
     xdg-desktop-portal-gnome
     wdisplays
     wl-clipboard
-    (flameshot.override { enableWlrSupport = true; })      # Screenshot
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
