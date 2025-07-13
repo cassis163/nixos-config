@@ -267,11 +267,14 @@ layout {
 spawn-at-startup "waybar"
 
 // Make X11 apps work for DISPLAY :0
-spawn-at-startup "xwayland-satellite"
+spawn-at-startup "xwayland-satellite" ":0"
 
 environment {
     DISPLAY ":0"
 }
+
+// Night light
+spawn-at-startup "wlsunset" "-l" "52.3" "-L" "4.9"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.

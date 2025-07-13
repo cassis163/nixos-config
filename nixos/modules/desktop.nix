@@ -45,6 +45,7 @@
     xdg-desktop-portal-gnome
     wdisplays
     wl-clipboard
+    wlsunset
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
