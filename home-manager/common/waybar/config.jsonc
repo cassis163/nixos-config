@@ -11,12 +11,12 @@
   // ],
   "modules-right": [
     "tray",
+    "backlight",
     "wireplumber",
     "network",
     "cpu",
     "memory",
     "disk",
-    // "backlight",
     "temperature",
     "battery",
     "clock",
