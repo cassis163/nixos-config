@@ -18,5 +18,6 @@
     ./chat.nix
     ./stylix.nix
     ./ssh.nix
+    ./podman.nix
   ];
 }
