@@ -1,5 +1,11 @@
 # cassis163's NixOS config
 
+<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/6dad70d5-8654-4a5f-b7d1-cb838fc9bec8" />
+
+.
+
+<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/b44919d7-4b49-43c5-9274-fa14f4c6782e" />
+
 ## Desktop
 * Niri WM
 * Plasma DE (as backup, will remove later)
