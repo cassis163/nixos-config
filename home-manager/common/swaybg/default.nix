@@ -5,7 +5,7 @@
   ...
 }:
 {
-  xdg.configFile."swaybg/wallpaper.jpg".source = ../../../wallpapers/wallpaper.jpg;
+  xdg.configFile."swaybg/wallpaper.png".source = ../../../wallpapers/wallpaper.png;
 
   home.packages = [ pkgs.swaybg ];
 
@@ -15,7 +15,7 @@
       PartOf = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStart = "${pkgs.swaybg}/bin/swaybg -i %h/.config/swaybg/wallpaper.jpg -m fill";
+      ExecStart = "${pkgs.swaybg}/bin/swaybg -i %h/.config/swaybg/wallpaper.png -m fill";
       Restart = "on-failure";
     };
     Install = {
