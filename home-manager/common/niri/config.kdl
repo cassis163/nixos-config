@@ -266,11 +266,11 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 
-// Make X11 apps work for DISPLAY :12
-spawn-at-startup "xwayland-satellite :12"
+// Make X11 apps work for DISPLAY :0
+spawn-at-startup "xwayland-satellite"
 
 environment {
-    DISPLAY ":12"
+    DISPLAY ":0"
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
