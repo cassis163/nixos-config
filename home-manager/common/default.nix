@@ -14,6 +14,7 @@
     ./alacritty
     ./nushell
     ./zellij
+    ./swaybg
   ];
 
   # Enable home-manager and git
