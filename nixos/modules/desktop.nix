@@ -36,6 +36,7 @@
     waybar       # Status bar
     swaylock     # Lockscreen
     mako         # Notifications
+    libnotify    # Notifications debugging
     swaybg       # Wallpaper utility
     xwayland-satellite
     xdg-desktop-portal-gtk

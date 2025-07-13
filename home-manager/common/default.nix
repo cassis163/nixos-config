@@ -15,6 +15,7 @@
     ./nushell
     ./zellij
     ./swaybg
+    ./mako
   ];
 
   # Enable home-manager and git
