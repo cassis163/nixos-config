@@ -21,6 +21,12 @@
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
+            name = "Go";
+            publisher = "golang";
+            version = "0.49.0";
+            sha256 = "sha256-8NahTd2v057997GsW9OgxFo9qDLoGIeNvYUQrpXSHDI=";
+          }
+          {
             name = "github-vscode-theme";
             publisher = "GitHub";
             version = "6.3.5";

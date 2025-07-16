@@ -60,6 +60,21 @@
             }
           ];
         };
+        work-laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          # > Our main nixos configuration file <
+          modules = [
+            ./nixos/hosts/work-laptop/configuration.nix
+            stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.caspera-fv = import ./home-manager/work/work.nix;
+              home-manager.backupFileExtension = "backup";
+            }
+          ];
+        };
       };
     };
 }
