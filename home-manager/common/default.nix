@@ -19,6 +19,7 @@
     ./mako
     ./just
     ./git
+    ./swaylock
   ];
 
   # Enable home-manager and git
