@@ -202,15 +202,16 @@
     },
     "hardware": {
       "locked": {
-        "lastModified": 1751432711,
-        "narHash": "sha256-136MeWtckSHTN9Z2WRNRdZ8oRP3vyx3L8UxeBYE+J9w=",
-        "owner": "NixOS",
+        "lastModified": 1752698258,
+        "narHash": "sha256-xvJSb5qnjkEWAPOQ+NmVht0G4/+Zq8aL7xZgAh/Bsw0=",
+        "owner": "cassis163",
         "repo": "nixos-hardware",
-        "rev": "497ae1357f1ac97f1aea31a4cb74ad0d534ef41f",
+        "rev": "a0d5b45ab6717d76215d1093ec0296ca85c60df1",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
+        "owner": "cassis163",
+        "ref": "add-hp-probook-460-g11",
         "repo": "nixos-hardware",
         "type": "github"
       }

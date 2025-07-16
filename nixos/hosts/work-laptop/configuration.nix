@@ -11,8 +11,7 @@
   # You can import other NixOS modules here
   imports = [
     # If you want to use modules from other flakes (such as nixos-hardware):
-    inputs.hardware.nixosModules.common-cpu-intel
-    inputs.hardware.nixosModules.common-pc-laptop
+    inputs.hardware.nixosModules.hp-probook-460-g11
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix

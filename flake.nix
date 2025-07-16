@@ -11,7 +11,7 @@
 
     stylix.url = "github:nix-community/stylix/release-25.05";
 
-    hardware.url = "github:NixOS/nixos-hardware";
+    hardware.url = "github:cassis163/nixos-hardware/add-hp-probook-460-g11";
   };
 
   outputs =
