@@ -18,5 +18,6 @@
     ./stylix.nix
     ./ssh.nix
     ./podman.nix
+    ./vm.nix
   ];
 }

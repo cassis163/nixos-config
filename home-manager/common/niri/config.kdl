@@ -329,10 +329,15 @@ window-rule {
 }
 
 window-rule {
-    match ( (app-id=r#"firefox$"# title="^Picture-in-Picture$") ||
-            (app-id=r#"chromium.*"# title="Notification") )
-    open-floating = true
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
 }
+
+window-rule {
+    match app-id=r#"chromium.*$"# title="^Notification$"
+    open-floating true
+}
+
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
