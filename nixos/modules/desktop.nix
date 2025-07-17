@@ -47,6 +47,7 @@
     wl-clipboard
     wlsunset
     usbimager
+    gnome-keyring
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
