@@ -80,7 +80,6 @@
 
   boot.initrd.kernelModules = [ "i915" ];
 
-  # Mesa
   hardware.graphics.extraPackages = with pkgs; [
     mesa
     vpl-gpu-rt

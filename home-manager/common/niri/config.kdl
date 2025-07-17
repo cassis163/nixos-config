@@ -102,11 +102,11 @@ input {
     position x=1280 y=0
 }
 
-output "DP-5" {
+output "DP-6" {
     position x=0 y=0
 }
 
-output "DP-7" {
+output "DP-9" {
     position x=1920 y=0
 }
 
