@@ -5,8 +5,6 @@
   ...
 }:
 {
-  ### Plasma DE
-
   services = {
     desktopManager.plasma6.enable = true;
     displayManager.sddm = {
@@ -26,7 +24,6 @@
     # Essential components
     just # Make NixOS commands less cumbersome
     alacritty # Terminal
-    # xwayland-satellite
     wl-clipboard
   ];
 

@@ -29,3 +29,5 @@ hooks: {
     }]
   }
 }
+
+alias idea = idea-community
