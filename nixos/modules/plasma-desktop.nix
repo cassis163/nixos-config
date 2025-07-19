@@ -25,10 +25,12 @@
     just # Make NixOS commands less cumbersome
     alacritty # Terminal
     wl-clipboard
+    chromium # Browser
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # Graphics
   hardware.graphics = {
     enable = true;
 

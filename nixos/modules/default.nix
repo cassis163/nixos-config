@@ -7,7 +7,6 @@
     ./audio.nix
     ./dev.nix
     ./nvim.nix
-    ./browser.nix
     ./fonts.nix
     ./direnv.nix
     ./displaylink.nix
