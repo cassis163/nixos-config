@@ -2,19 +2,16 @@
   imports = [
     ./networking.nix
     ./users.nix
-    ./graphics.nix
     ./bluetooth.nix
-    ./desktop.nix
+    ./plasma-desktop.nix
     ./audio.nix
     ./dev.nix
     ./nvim.nix
     ./browser.nix
-    ./backlight.nix
     ./fonts.nix
     ./direnv.nix
     ./displaylink.nix
     ./locale.nix
-    ./stylix.nix
     ./ssh.nix
     ./virtualization.nix
   ];

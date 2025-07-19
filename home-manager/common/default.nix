@@ -9,17 +9,11 @@
 }:
 {
   imports = [
-    ./waybar
-    ./niri
-    ./fuzzel
     ./alacritty
     ./nushell
     ./zellij
-    ./swaybg
-    ./mako
     ./just
     ./git
-    ./swaylock
   ];
 
   # Enable home-manager and git
