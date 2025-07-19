@@ -15,6 +15,10 @@
     };
   };
 
+  environment.variables = {
+    KWIN_DRM_PREFER_COLOR_DEPTH = "24";
+  };
+
   # Fix invisible cursor and theming
   programs.dconf.enable = true;
 

@@ -5,7 +5,7 @@
 {
   programs.virt-manager.enable = true;
 
-  users.groups.libvirtd.members = ["caspera-fv", "caspera"];
+  users.groups.libvirtd.members = ["caspera-fv" "caspera"];
 
   virtualisation.libvirtd.enable = true;
 
