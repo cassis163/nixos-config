@@ -12,12 +12,10 @@
     ./backlight.nix
     ./fonts.nix
     ./direnv.nix
-    # DisplayLink is currently unsupported
-    # ./displaylink.nix
+    ./displaylink.nix
     ./locale.nix
     ./stylix.nix
     ./ssh.nix
-    ./podman.nix
-    ./vm.nix
+    ./virtualization.nix
   ];
 }

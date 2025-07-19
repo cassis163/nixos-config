@@ -1,10 +1,20 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
+  programs.virt-manager.enable = true;
+
+  users.groups.libvirtd.members = ["caspera-fv", "caspera"];
+
+  virtualisation.libvirtd.enable = true;
+
+  virtualisation.spiceUSBRedirection.enable = true;
+
   # Enable common container config files in /etc/containers
-  virtualisation.containers.enable = true;
   virtualisation = {
+    containers.enable = true;
+
     podman = {
       enable = true;
 
@@ -21,6 +31,6 @@
     dive # look into docker image layers
     podman-tui # status of containers in the terminal
     # docker-compose # start group of containers for dev
-    podman-compose # start group of containers for dev
+    podman-compose # kdePackages.krohnkitestart group of containers for dev
   ];
 }
