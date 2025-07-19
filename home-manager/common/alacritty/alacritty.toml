@@ -19,8 +19,8 @@ style = "Italic"
 family = "JetBrainsMonoNL NF"
 style = "Regular"
 
-[window]
-decorations = "None"
+# [window]
+# decorations = "None"
 
 [terminal]
 shell = { program = "zellij", args = ["options", "--default-shell", "nu"] }
